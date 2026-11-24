@@ -1,4 +1,4 @@
-local modem = peripheral.find("modem", rednet.open())
+local modem = peripheral.find("modem", rednet.open)
 local id, message = rednet.receive()
 local monitor = peripheral.find("monitor")
 monitor.setCursorPos(1,1)
