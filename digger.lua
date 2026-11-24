@@ -1,4 +1,4 @@
-while _ do
+while true do
     turtle.dig()
     turtle.suck(1)
     turtle.up()
