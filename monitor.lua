@@ -5,7 +5,7 @@ local monitor = peripheral.find("monitor")
 local width, height = mon.getSize()
 local lines = ccstring.wrap(message, width)
 monitor.clear()
-monitor.setTextscale(0.1)
+monitor.setTextScale(0.5)
 for i in ipairs(lines) do
     monitor.setCursorPos(0,i)
     monitor.write(line)
