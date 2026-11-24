@@ -1,4 +1,5 @@
 while true do
+    turtle.select(1)
     turtle.dig()
     turtle.suck(1)
     turtle.up()
