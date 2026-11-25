@@ -24,31 +24,33 @@ function moveBack(x)
     turtle.turnLeft()
 end
 
+function digPick(x)
+    turtle.dig()
+    turtle.suck(x)
+end
+
+function placeBlock(x)
+    turtle.select(x)
+    turtle.place()
+end
 while true do
     turtle.select(1) --break builder
-    turtle.dig()
-    turtle.suck(1)
+    digPick(1)
     turtle.up()
-    turtle.dig()
-    turtle.suck(1)
+    digPick(1)
     turtle.down()
     moveRight(1)
-    turtle.dig()
-    turtle.suck(1)
+    digPick(1)
     moveLeft(1)
     advance(16)
-    turtle.select(2) --place builder
-    turtle.place()
+    placeBlock(2) --place builder
     turtle.up()
-    turtle.select(3)
-    turtle.place()
+    placeBlock(3)
     turtle.down()
     moveLeft(1)
-    turtle.select(1)
-    turtle.place()
+    placeBlock(1)
     moveRight(2)
-    turtle.select(4)
-    turtle.place()
+    placeBlock(4)
     moveLeft(1)
     sleep(10)
 end
