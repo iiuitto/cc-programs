@@ -1,5 +1,11 @@
+function advance (x)
+    for i = 1, x do
+        turtle.forward()
+    end
+end
+
 while true do
-    turtle.select(1)
+    turtle.select(1) --break builder
     turtle.dig()
     turtle.suck(1)
     turtle.up()
@@ -14,10 +20,8 @@ while true do
     turtle.turnLeft()
     turtle.forward()
     turtle.turnRight()
-    for i = 1, 17 do
-        turtle.forward()
-    end
-    turtle.select(2)
+    advance(16)
+    turtle.select(2) --place builder
     turtle.place()
     turtle.up()
     turtle.select(3)
