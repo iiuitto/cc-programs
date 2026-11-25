@@ -4,6 +4,26 @@ function advance (x)
     end
 end
 
+function moveLeft(x)
+    turtle.turnLeft()
+    advance(x)
+    turtle.turnRight()
+end
+
+function moveRight(x)
+    turtle.turnRight()
+    advance(x)
+    turtle.turnLeft()
+end
+
+function moveBack(x)
+    turtle.turnLeft()
+    turtle.turnLeft()
+    advance(x)
+    turtle.turnLeft()
+    turtle.turnLeft()
+end
+
 while true do
     turtle.select(1) --break builder
     turtle.dig()
@@ -12,14 +32,10 @@ while true do
     turtle.dig()
     turtle.suck(1)
     turtle.down()
-    turtle.turnRight()
-    turtle.forward()
-    turtle.turnLeft()
+    moveRight(1)
     turtle.dig()
     turtle.suck(1)
-    turtle.turnLeft()
-    turtle.forward()
-    turtle.turnRight()
+    moveLeft(1)
     advance(16)
     turtle.select(2) --place builder
     turtle.place()
@@ -27,19 +43,12 @@ while true do
     turtle.select(3)
     turtle.place()
     turtle.down()
-    turtle.turnLeft()
-    turtle.forward()
-    turtle.turnRight()
+    moveLeft(1)
     turtle.select(1)
     turtle.place()
-    turtle.turnRight()
-    turtle.forward()
-    turtle.forward()
-    turtle.turnLeft()
+    moveRight(2)
     turtle.select(4)
     turtle.place()
-    turtle.turnLeft()
-    turtle.forward()
-    turtle.turnRight()
+    moveLeft(1)
     sleep(10)
 end
