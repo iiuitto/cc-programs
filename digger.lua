@@ -49,7 +49,7 @@ while true do
     moveRight(1, 0)
     digPick(1)
     moveLeft(1, 0)
-    
+    advance(16)
     
 
     placeBlock(2) --place builder
@@ -71,13 +71,14 @@ while true do
     placeBlock(6)
     turtle.select(5)
     turtle.drop(1)
+    sleep(1)
     digPick(2)
     turtle.turnLeft()
     placeBlock(7)
-    turtle.up()
     placeBlock(6)
     turtle.select(5)
     turtle.drop(1)
+    sleep(1)
     digPick(2)
     turtle.down()
     moveBack(8,0)
