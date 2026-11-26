@@ -93,9 +93,8 @@ while true do
     moveRight(3,0)
     turtle.select(1)
 
-    
-    moveLeft(3, 0) --break old chunk loader
-    moveBack(7, 1)
+
+    moveBack(14, 1) --break old chunk loader
     turtle.select(7)
     digPick(1)
     moveBack(7,1)
