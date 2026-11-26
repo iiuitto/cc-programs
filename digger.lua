@@ -49,8 +49,9 @@ while true do
     moveRight(1, 0)
     digPick(1)
     moveLeft(1, 0)
-    advance(16)
     
+    
+
     placeBlock(2) --place builder
     turtle.up()
     placeBlock(3)
@@ -61,12 +62,36 @@ while true do
     placeBlock(4)
     moveLeft(1, 0)
     
-    moveLeft(2, 0) --chunk loader placement
-    moveBack(6, 1)
+    moveLeft(3,0) --place chunkloaders
+    advance(8)
+    placeBlock(7)
+    turtle.turnRight()
+    placeBlock(7)
+    turtle.up()
+    placeBlock(6)
     turtle.select(5)
+    turtle.drop(1)
+    digPick(2)
+    turtle.turnLeft()
+    placeBlock(7)
+    turtle.up()
+    placeBlock(6)
+    turtle.select(5)
+    turtle.drop(1)
+    digPick(2)
+    turtle.down()
+    moveBack(8,0)
+    moveRight(3,0)
+    turtle.select(1)
+
+    
+    moveLeft(3, 0) --break old chunk loader
+    moveBack(6, 1)
+    turtle.select(7)
     digPick(1)
     moveBack(6,1)
     moveRight(2,0)
+    turtle.select(1)
     
     sleep(10)
 end
