@@ -89,10 +89,6 @@ while true do
     sleep(1)
     digPick(2)
     turtle.down()
-    moveBack(8,0)
-    moveRight(3,0)
-    turtle.select(1)
-
 
     moveBack(14, 1) --break old chunk loader
     turtle.select(7)
