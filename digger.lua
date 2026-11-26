@@ -56,7 +56,7 @@ while true do
     select(7)
     digPick(1)
     moveLeft(2,0)
-    moveBack(8,1)
+    moveBack(7,1)
 
     
 
