@@ -49,7 +49,15 @@ while true do
     moveRight(1, 0)
     digPick(1)
     moveLeft(1, 0)
-    advance(16)
+    
+    advance(10) --break previous chunkloaders in previous chunk
+    moveLeft(2,0)
+    moveBack(1,1)
+    select(7)
+    digPick(1)
+    moveLeft(2,0)
+    moveBack(8,1)
+
     
 
     placeBlock(2) --place builder
@@ -91,7 +99,7 @@ while true do
     turtle.select(7)
     digPick(1)
     moveBack(6,1)
-    moveRight(2,0)
+    moveRight(3,0)
     turtle.select(1)
     
     sleep(10)
